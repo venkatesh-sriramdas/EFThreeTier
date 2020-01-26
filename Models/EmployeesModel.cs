@@ -19,7 +19,6 @@ namespace Models
         public int? Salary { get; set; }
         public int? DepartmentId { get; set; }
 
-        //test
     }
 }
 
