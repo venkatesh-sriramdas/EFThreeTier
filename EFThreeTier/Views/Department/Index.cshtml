@@ -1,0 +1,39 @@
+﻿@using Models;
+@model List<DepartmentModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="container">
+    @if (Model.Count != 0)
+    {
+        
+            <table class="table table-hover">
+                <thead  >
+                    <tr>
+                        <th>Department ID</th>
+                        <th>Department Name</th>
+                        <th>Department Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (DepartmentModel dept in Model)
+                    {
+                        <tr>
+                            <td>@dept.ID</td>
+                            <td> @Html.ActionLink(@dept.Name,"GetEmployeesBasedOnDepartment",new {_DepartmentID = @dept.ID }) </td>
+                            <td>@dept.Location</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        
+    }
+    else
+    {
+        <h2>No Data Found</h2>
+    }
+</div>
+
