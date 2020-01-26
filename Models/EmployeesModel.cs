@@ -18,6 +18,8 @@ namespace Models
         public string Gender { get; set; }
         public int? Salary { get; set; }
         public int? DepartmentId { get; set; }
+
+        //test
     }
 }
 
