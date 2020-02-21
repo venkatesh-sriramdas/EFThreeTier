@@ -8,15 +8,16 @@
 
 <h2>Employees</h2>
 
-
-
 <div class="container">
     @if (Model.Count != 0)
     {
 
         <div class="panel panel-default">
             <div class="panel-heading" style="font-weight:900;font-size:larger;font-family:cursive;">
-               Employee Information
+                Employee Information
+
+                <a href="#" id="username" data-type="text" data-pk="1" data-url="/Department/index" data-title="Enter username" class="editable editable-click">superuser</a>
+
             </div>
             <div class="panel-body">
                 <table class="table">
@@ -39,7 +40,6 @@
                         }
                     </tbody>
                 </table>
-
             </div>
         </div>
 
@@ -49,3 +49,6 @@
         <h2>No Data Found</h2>
     }
 </div>
+
+ 
+ 

@@ -6,6 +6,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+   
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -38,5 +44,15 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <link href="~/Content/bootstrap-editable.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap-editable.js"></script>
+    <script>
+        $.fn.editable.defaults.mode = 'inline';
+        $(document).ready(function () {
+            $('#username').editable();
+        });
+    </script>
+
 </body>
 </html>
